@@ -2,6 +2,21 @@
 /* eslint-disable class-methods-use-this */
 const { LimitedArray, getIndexBelowMax } = require('./hash-table-helpers');
 
+class Node {
+  constructor(key, value) {
+      this[key] = value;
+      this.next = null;
+  }
+}
+
+// new code
+class List {
+  constructor(node) {
+      this.head = node;
+      this.count = 0;
+  }
+}
+
 class HashTable {
   constructor(limit = 8) {
     this.limit = limit;
